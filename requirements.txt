@@ -1,0 +1,4 @@
+discord
+pandas
+matplotlib
+python-dotenv
