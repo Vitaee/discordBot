@@ -9,7 +9,7 @@ from matplotlib import style
 style.use("fivethirtyeight")
 
 load_dotenv()
-TOKEN = os.getenv('NzIyMDExMzA3MzAxMjczNjIz.Xuc_8A.wMJSM7Fc4Ic92ARqWxqRAM-p_DY')
+TOKEN = os.getenv('TOKEN')
 client = discord.Client()
 
 def community_report(guild):
@@ -57,7 +57,7 @@ async def user_metrics_background_task():
 
 @client.event
 async def on_message(message):
-    bad_words = ["mall herif","sokuk", "göt", "amk","sikik","salak","döl israfı","manyak","amık","amk salağı","amınakoyum","amına koyam","orosbu","orosbu evladı","orosbu çocu","piç"]
+    bad_words = ["INSERT_BAD_WORDS"]
 
     for word in bad_words:
         if message.content.count(word) > 0:
@@ -137,4 +137,4 @@ async def on_ready():
 
 
 client.loop.create_task(user_metrics_background_task())
-client.run("NzIyMDExMzA3MzAxMjczNjIz.Xuc_8A.wMJSM7Fc4Ic92ARqWxqRAM-p_DY")
+client.run("TOKEN")
